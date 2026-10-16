@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDR Receiver | 家の受信機を、iPhoneで聴く</title>
+  <meta name="description" content="rtl_tcp で動いている RTL-SDR に Wi-Fi でつなぐ iPhone アプリです。ウォーターフォールを見ながら指で周波数を合わせて、FM・航空無線・アマチュア無線などを聴けます。">
+  <meta name="theme-color" content="#12a9b8">
+  <meta property="og:title" content="SDR Receiver">
+  <meta property="og:description" content="家の受信機を、iPhoneで聴く。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/shot-fm.jpg">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <a class="logo" href="#top"><img src="assets/icon-white.svg" alt=""><span>SDR RECEIVER</span></a>
+      <nav class="menu" aria-label="ページ内">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#screens">Screens</a>
+        <a href="#start">Start</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <div class="label">SDR Receiver for iPhone</div>
+          <h1><span class="nb">家の受信機を、</span><br><span class="nb">iPhoneで聴く。</span></h1>
+          <p class="lead">rtl_tcp で動いている RTL-SDR に、Wi-Fi 越しにつなぐアプリです。電波の様子を見ながら、指で周波数を合わせられます。</p>
+          <span class="store">App Store <small>準備中</small></span>
+        </div>
+        <div class="hero-visual">
+          <div class="sun" aria-hidden="true"></div>
+          <div class="dots" aria-hidden="true"></div>
+          <div class="phone">
+            <img src="assets/shot-fm.jpg" alt="80.000 MHz の FM 放送を受信している画面。局名とステレオ表示、スペクトラムとウォーターフォール" width="600" height="1305">
+          </div>
+        </div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><path class="wave-white" d="M0 96C180 40 330 30 520 70s340 90 520 60 280-90 400-100v134H0Z"/></svg>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="pad statement">
+      <div class="wrap reveal">
+        <div class="label">About</div>
+        <h2>アンテナは家に置いたまま、<br>音は手元で。</h2>
+        <p>SDR で無線を聴くときは、たいてい PC の前に座ることになります。このアプリは、受信機を動かしている PC や Raspberry Pi に iPhone からつないで、ソファでも台所でも同じように聴けるようにするものです。</p>
+        <p style="margin-top:1.2em">はじめは用途を選ぶだけで使えます。細かく追い込みたくなったら、設定をすべて開けられます。</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="pad" style="padding-top:0">
+      <div class="wrap">
+        <div class="features-head reveal">
+          <div>
+            <p class="label-lg">Features</p>
+            <span class="sub">できること</span>
+          </div>
+          <p>FM 放送、航空無線、アマチュア無線、業務無線など。受信機が拾える範囲なら、アナログの電波はだいたい聴けます。</p>
+        </div>
+
+        <div class="feature-list">
+          <article class="feature reveal">
+            <div class="num">01 / Tune</div>
+            <h3>画面に触れて合わせる</h3>
+            <p>ウォーターフォールで気になる信号をタップすると、その周波数に飛びます。左右になぞれば 1 kHz ずつ動くので、細かい調整もそのまま指で。二本指で広げると、混み合った帯域を拡大できます。</p>
+          </article>
+          <article class="feature reveal">
+            <div class="num">02 / Listen</div>
+            <h3>6 つの受信モード</h3>
+            <p>周波数を入れると、その帯でよく使われるモードを選んでくれます。FM 放送はステレオで聴けて、局名（RDS）も表示されます。</p>
+            <div class="tags"><span>WFM</span><span>NFM</span><span>AM</span><span>USB</span><span>LSB</span><span>CW</span></div>
+          </article>
+          <article class="feature reveal">
+            <div class="num">03 / Record</div>
+            <h3>あとで聴き返す</h3>
+            <p>ボタンひとつで音声を録音できます。スケルチ連動にしておくと、交信があったあいだだけを録って、1 回ごとに別のファイルにします。電波そのものを残す IQ 録音もあります。</p>
+          </article>
+          <article class="feature reveal">
+            <div class="num">04 / Scan</div>
+            <h3>電波が出ているところを探す</h3>
+            <p>開始と終了の周波数を決めて順に回るか、保存しておいたチャンネルを巡回します。信号が入るとそこで止まり、静かになるとまた動き出します。</p>
+          </article>
+        </div>
+
+        <div class="also reveal">
+          <div class="label">And more</div>
+          <ul>
+            <li>用途を選ぶだけの「シンプル」表示</li>
+            <li>最大 4 つの VFO を同時に監視</li>
+            <li>ノイズ低減、オートノッチ</li>
+            <li>過入力を検知してゲインを自動で調整</li>
+            <li>他のアプリを使っていても受信を継続</li>
+            <li>メモリの CSV 入出力、SDR# 形式の取り込み</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screens -->
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" style="background:var(--white)"><path class="wave-pale" d="M0 70c220-60 420-70 640-30s420 70 600 40 160-40 200-50v90H0Z"/></svg>
+    <section id="screens" class="screens" style="padding:90px 0 150px">
+      <div class="wrap">
+        <div class="screens-head reveal">
+          <div class="label">Screens</div>
+          <h2>画面</h2>
+        </div>
+        <div class="gallery reveal">
+          <figure><div class="phone"><img src="assets/shot-fm.jpg" alt="FM 放送を受信中の画面" loading="lazy" width="600" height="1305"></div><figcaption>FM 放送をステレオで</figcaption></figure>
+          <figure><div class="phone"><img src="assets/shot-vfo.jpg" alt="2 つの VFO で別々の局を監視している画面" loading="lazy" width="600" height="1305"></div><figcaption>2 局を同時に監視</figcaption></figure>
+          <figure><div class="phone"><img src="assets/shot-scan.jpg" alt="範囲スキャンの設定画面" loading="lazy" width="600" height="1305"></div><figcaption>範囲を決めてスキャン</figcaption></figure>
+          <figure><div class="phone"><img src="assets/shot-settings.jpg" alt="シンプル表示とアドバンスド表示を切り替える設定画面" loading="lazy" width="600" height="1305"></div><figcaption>表示の切り替え</figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" style="background:var(--teal-pale)"><path class="wave-white" d="M0 40c240 50 460 70 700 40s440-80 740-40v80H0Z"/></svg>
+
+    <!-- Start -->
+    <section id="start" class="pad start" style="padding-top:110px">
+      <div class="wrap start-grid">
+        <div class="reveal">
+          <div class="label">Start</div>
+          <h2>使いはじめるまで</h2>
+          <p>iPhone に受信機を直接さすことはできないので、受信機はネットワーク上の PC か Raspberry Pi につないで使います。</p>
+          <dl class="need">
+            <dt>用意するもの</dt>
+            <dd>
+              <ul>
+                <li>RTL-SDR などの受信機とアンテナ</li>
+                <li>rtl_tcp を動かせる PC か Raspberry Pi</li>
+                <li>iPhone と同じ Wi-Fi</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <ol class="steps reveal">
+          <li><div><h3>受信機をつなぐ</h3><p>RTL-SDR を PC や Raspberry Pi の USB にさして、アンテナを付けます。</p></div></li>
+          <li><div><h3>rtl_tcp を起動する</h3><p><code>rtl_tcp -a 0.0.0.0</code> のように、ほかの機器から接続できる形で起動します。</p></div></li>
+          <li><div><h3>アプリから接続する</h3><p>設定の「ソース」で rtl_tcp を選び、PC の IP アドレスとポート番号を入れます。</p></div></li>
+          <li><div><h3>聴きたいものを選ぶ</h3><p>「FMラジオ」「航空」などの用途を選んで、受信ボタンを押します。</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Note -->
+    <section class="pad" style="padding-top:0">
+      <div class="wrap">
+        <div class="note reveal">
+          <div>
+            <div class="label">Notice</div>
+            <h2>受信した内容の<br>扱いについて</h2>
+          </div>
+          <div>
+            <p>このアプリは受信だけを行い、電波を出すことはありません。</p>
+            <p>日本では電波法により、特定の相手に向けた無線通信を傍受したとき、その内容を他人に漏らしたり、自分のために使ったりすることが禁じられています。録音したデータも含めて、取り扱いは利用する方の責任でお願いします。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="pad" style="padding-top:20px">
+      <div class="wrap">
+        <div style="text-align:center" class="reveal">
+          <p class="label-lg">FAQ</p>
+          <span class="sub" style="display:block;margin-top:14px;font-size:13px;letter-spacing:.2em;color:var(--ink-3)">よくある質問</span>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>受信機を iPhone に直接つなげますか？</summary>
+            <p>つなげません。PC や Raspberry Pi で rtl_tcp を動かして、そこにネットワーク経由でつなぎます。</p>
+          </details>
+          <details>
+            <summary>受信機がなくても試せますか？</summary>
+            <p>試せます。アプリに「デモ信号」が入っていて、受信機がなくても画面の操作や録音を一通り確認できます。</p>
+          </details>
+          <details>
+            <summary>SpyServer には対応していますか？</summary>
+            <p>今は対応していません。</p>
+          </details>
+          <details>
+            <summary>デジタル無線（DMR など）は聴けますか？</summary>
+            <p>聴けません。デジタル音声の方式には特許やライセンスの問題があるものが多く、このアプリではアナログ方式だけを扱っています。</p>
+          </details>
+          <details>
+            <summary>短波は受信できますか？</summary>
+            <p>受信できる周波数は受信機しだいです。一般的な RTL-SDR（R820T）なら、おおよそ 24〜1766 MHz です。短波帯の受信に使うダイレクトサンプリングには、まだ対応していません。</p>
+          </details>
+          <details>
+            <summary>録音はどこに保存されますか？</summary>
+            <p>iPhone の中、このアプリの領域にだけ保存されます。外部に送られることはありません。共有するときは、その前に注意書きが表示されます。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path class="wave-teal" d="M0 60c200-50 430-60 650-20s430 70 610 40 140-40 180-50v90H0Z"/></svg>
+    <div class="footer-body">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="big">SDR Receiver</p>
+        <p>App Store での公開に向けて準備しています。</p>
+      </div>
+      <nav aria-label="フッター">
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="#faq">よくある質問</a>
+      </nav>
+    </div>
+    <div class="wrap copy">© 2026 SDR Receiver ・ 掲載している画面は iOS シミュレーターと合成信号で撮影したものです。</div>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>
