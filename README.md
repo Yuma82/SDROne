@@ -1,4 +1,4 @@
-# SDR Receiver website
+# SDROne website
 
-Source of https://<username>.github.io/sdr-receiver/ (GitHub Pages, branch main, root).
-The app itself lives in a separate private repository; edit the site there under `site/` and copy it here.
+Source of the SDROne product site (GitHub Pages, branch `main`, root).
+The app itself lives in a separate private repository; the site is edited there under `site/` and copied here.
