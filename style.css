@@ -28,7 +28,8 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
-h1, h2, h3, p, li, dt, dd, summary { word-break: auto-phrase; }
+/* Lines break only at the <wbr> phrase boundaries in the HTML (see tools/wrap_phrases.py). */
+body { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
 
 .wrap { width: min(var(--maxw), 100% - 48px); margin-inline: auto; }
 
@@ -54,6 +55,8 @@ h1, h2, h3, p, li, dt, dd, summary { word-break: auto-phrase; }
 /* ---------- Hero ---------- */
 .hero { position: relative; background: var(--teal); color: var(--white); padding: 150px 0 0; overflow: hidden; }
 .nb { white-space: nowrap; }
+.sp { display: none; }
+@media (max-width: 560px) { .sp { display: inline; } }
 .hero-inner { display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: 40px; }
 @media (max-width: 880px) { .hero-inner { grid-template-columns: 1fr; } .hero { padding-top: 120px; } }
 .hero .label { color: rgba(255,255,255,.85); }
