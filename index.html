@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SDR Receiver | 家の受信機を、iPhoneで聴く</title>
-  <meta name="description" content="rtl_tcp で動いている RTL-SDR に Wi-Fi でつなぐ iPhone アプリです。ウォーターフォールを見ながら指で周波数を合わせて、FM・航空無線・アマチュア無線などを聴けます。">
+  <title>SDROne | 家の受信機を、iPhoneとiPadで聴く</title>
+  <meta name="description" content="rtl_tcp で動いている RTL-SDR に Wi-Fi でつなぐ iPhone / iPad アプリです。ウォーターフォールを見ながら指で周波数を合わせて、FM・航空無線・アマチュア無線などを聴けます。航空機と船舶を地図に表示することもできます。">
   <meta name="theme-color" content="#12a9b8">
-  <meta property="og:title" content="SDR Receiver">
-  <meta property="og:description" content="家の受信機を、iPhoneで聴く。">
+  <meta property="og:title" content="SDROne">
+  <meta property="og:description" content="家の受信機を、iPhoneとiPadで聴く。">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/shot-fm.jpg">
-  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
 <body>
   <header class="header">
     <div class="wrap">
-      <a class="logo" href="#top"><img src="assets/icon-white.svg" alt=""><span>SDR RECEIVER</span></a>
+      <a class="logo" href="#top"><img src="assets/icon-white.svg" alt=""><span>SDRONE</span></a>
       <nav class="menu" aria-label="ページ内">
         <a href="#about">About</a>
         <a href="#features">Features</a>
@@ -35,9 +36,9 @@
     <section class="hero">
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <div class="label">SDR Receiver for iPhone</div>
-          <h1><span class="nb">家の受信機を、</span><br><span class="nb">iPhoneで聴く。</span></h1>
-          <p class="lead">rtl_tcp で動いている RTL-SDR に、Wi-Fi 越しにつなぐアプリです。電波の様子を見ながら、指で周波数を合わせられます。</p>
+          <div class="label">SDROne for iPhone &amp; iPad</div>
+          <h1><span class="nb">家の受信機を、</span><br><span class="nb">iPhoneとiPadで聴く。</span></h1>
+          <p class="lead">rtl_tcp で動いている RTL-SDR に、Wi-Fi 越しにつなぐアプリです。電波の様子を見ながら、指で周波数を合わせられます。iPad では、大きな画面で電波を眺められます。</p>
           <span class="store">App Store <small>準備中</small></span>
         </div>
         <div class="hero-visual">
@@ -57,7 +58,7 @@
         <div class="label">About</div>
         <h2>アンテナは家に置いたまま、<br>音は手元で。</h2>
         <p>SDR で無線を聴くときは、たいてい PC の前に座ることになります。このアプリは、受信機を動かしている PC や Raspberry Pi に iPhone からつないで、ソファでも台所でも同じように聴けるようにするものです。</p>
-        <p style="margin-top:1.2em">はじめは用途を選ぶだけで使えます。細かく追い込みたくなったら、設定をすべて開けられます。</p>
+        <p style="margin-top:1.2em">「FMラジオ」「航空」などの用途を選べば、モードや帯域幅、スケルチをまとめて設定します。細かく追い込みたくなったら、すべての設定をそのまま触れます。初めて開いたときは、画面の各ボタンを順に案内します。</p>
       </div>
     </section>
 
@@ -69,7 +70,7 @@
             <p class="label-lg">Features</p>
             <span class="sub">できること</span>
           </div>
-          <p>FM 放送、航空無線、アマチュア無線、業務無線など。受信機が拾える範囲なら、アナログの電波はだいたい聴けます。</p>
+          <p>FM 放送、航空無線、アマチュア無線、業務無線など。受信機が拾える範囲なら、アナログの電波はだいたい聴けます。航空機や船舶の位置も地図で見られます。</p>
         </div>
 
         <div class="feature-list">
@@ -94,13 +95,26 @@
             <h3>電波が出ているところを探す</h3>
             <p>開始と終了の周波数を決めて順に回るか、保存しておいたチャンネルを巡回します。信号が入るとそこで止まり、静かになるとまた動き出します。</p>
           </article>
+          <article class="feature reveal">
+            <div class="num">05 / Map</div>
+            <h3>航空機と船舶を地図に</h3>
+            <p>航空機の位置情報（ADS-B）と、船舶の自動識別信号（AIS）を受信して、地図に表示します。機体や船をタップすると、高度や速度などの詳細が出ます。アマチュア無線のデジタル通信 FT8 の解読にも対応しています。</p>
+            <div class="tags"><span>ADS-B</span><span>AIS</span><span>FT8</span></div>
+          </article>
+          <article class="feature reveal">
+            <div class="num">06 / iPad</div>
+            <h3>iPad の大きな画面で</h3>
+            <p>横向きでは、左に操作、右に大きなスペクトラムとウォーターフォールを並べます。お気に入りの周波数も、左に並べて呼び出せます。縦向きにも対応しています。</p>
+          </article>
         </div>
 
         <div class="also reveal">
           <div class="label">And more</div>
           <ul>
-            <li>用途を選ぶだけの「シンプル」表示</li>
+            <li>用途プリセットで、モードや帯域幅をまとめて設定</li>
             <li>最大 4 つの VFO を同時に監視</li>
+            <li>初回起動時の、画面ごとのチュートリアル</li>
+            <li>お気に入りの周波数の保存と呼び出し</li>
             <li>スケルチは画面下のボタンですぐ切り替え</li>
             <li>ノイズ低減、オートノッチ</li>
             <li>過入力を検知してゲインを自動で調整</li>
@@ -120,11 +134,17 @@
           <h2>画面</h2>
         </div>
         <div class="gallery reveal">
-          <figure><div class="phone"><img src="assets/shot-fm.jpg" alt="FM 放送を受信中の画面" loading="lazy" width="600" height="1305"></div><figcaption>FM 放送をステレオで</figcaption></figure>
-          <figure><div class="phone"><img src="assets/shot-vfo.jpg" alt="2 つの VFO で別々の局を監視している画面" loading="lazy" width="600" height="1305"></div><figcaption>2 局を同時に監視</figcaption></figure>
-          <figure><div class="phone"><img src="assets/shot-scan.jpg" alt="範囲スキャンの設定画面" loading="lazy" width="600" height="1305"></div><figcaption>範囲を決めてスキャン</figcaption></figure>
-          <figure><div class="phone"><img src="assets/shot-squelch.jpg" alt="スケルチのしきい値を調整する画面" loading="lazy" width="600" height="1305"></div><figcaption>スケルチの調整</figcaption></figure>
+          <figure><div class="phone"><img src="assets/shot-fm.jpg" alt="FM 放送を受信中の画面。局名とステレオ表示、スペクトラムとウォーターフォール" loading="lazy" width="552" height="1200"></div><figcaption>FM 放送をステレオで</figcaption></figure>
+          <figure><div class="phone"><img src="assets/shot-vfo.jpg" alt="2 つの VFO で別々の周波数を監視している画面" loading="lazy" width="552" height="1200"></div><figcaption>2 つの周波数を同時に監視</figcaption></figure>
+          <figure><div class="phone"><img src="assets/shot-map.jpg" alt="航空機を地図に表示している画面" loading="lazy" width="552" height="1200"></div><figcaption>航空機を地図に</figcaption></figure>
+          <figure><div class="phone"><img src="assets/shot-ship.jpg" alt="船舶を地図に表示している画面" loading="lazy" width="552" height="1200"></div><figcaption>船舶を地図に</figcaption></figure>
+          <figure><div class="phone"><img src="assets/shot-scan.jpg" alt="範囲スキャンの設定画面" loading="lazy" width="552" height="1200"></div><figcaption>範囲を決めてスキャン</figcaption></figure>
+          <figure><div class="phone"><img src="assets/shot-squelch.jpg" alt="スケルチのしきい値を調整する画面" loading="lazy" width="552" height="1200"></div><figcaption>スケルチの調整</figcaption></figure>
         </div>
+        <figure class="tablet-wrap reveal">
+          <div class="tablet"><img src="assets/shot-ipad.jpg" alt="iPad の横向き画面。左に操作パネル、右に大きなスペクトラムとウォーターフォール" loading="lazy" width="1600" height="1103"></div>
+          <figcaption>iPad（横向き）</figcaption>
+        </figure>
       </div>
     </section>
     <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" style="background:var(--teal-pale)"><path class="wave-white" d="M0 40c240 50 460 70 700 40s440-80 740-40v80H0Z"/></svg>
@@ -135,14 +155,14 @@
         <div class="reveal">
           <div class="label">Start</div>
           <h2>使いはじめるまで</h2>
-          <p>iPhone に受信機を直接さすことはできないので、受信機はネットワーク上の PC か Raspberry Pi につないで使います。</p>
+          <p>iPhone や iPad に受信機を直接さすことはできないので、受信機はネットワーク上の PC か Raspberry Pi につないで使います。</p>
           <dl class="need">
             <dt>用意するもの</dt>
             <dd>
               <ul>
                 <li>RTL-SDR などの受信機とアンテナ</li>
                 <li>rtl_tcp を動かせる PC か Raspberry Pi</li>
-                <li>iPhone と同じ Wi-Fi</li>
+                <li>iPhone / iPad と同じ Wi-Fi</li>
               </ul>
             </dd>
           </dl>
@@ -185,8 +205,16 @@
             <p>つなげません。PC や Raspberry Pi で rtl_tcp を動かして、そこにネットワーク経由でつなぎます。</p>
           </details>
           <details>
+            <summary>iPad でも使えますか？</summary>
+            <p>使えます。iPad では横向きにすると、左に操作、右に大きなスペクトラムを並べた画面になります。縦向きにも対応しています。</p>
+          </details>
+          <details>
             <summary>受信機がなくても試せますか？</summary>
             <p>試せます。アプリに「デモ信号」が入っていて、受信機がなくても画面の操作や録音を一通り確認できます。</p>
+          </details>
+          <details>
+            <summary>航空機や船舶が地図に出ません</summary>
+            <p>航空機（ADS-B）は 1090 MHz、船舶（AIS）は 162 MHz 付近の電波を受信します。受信機とアンテナがその周波数に合っていて、近くに電波が飛んでいる必要があります。航空機の受信は 2 MS/s で行うため、Wi-Fi の通信量が増えます（約 4 MB/秒）。</p>
           </details>
           <details>
             <summary>SpyServer には対応していますか？</summary>
@@ -214,7 +242,7 @@
     <div class="footer-body">
     <div class="wrap footer-inner">
       <div>
-        <p class="big">SDR Receiver</p>
+        <p class="big">SDROne</p>
         <p>App Store での公開に向けて準備しています。</p>
       </div>
       <nav aria-label="フッター">
@@ -222,7 +250,7 @@
         <a href="contact.html">お問い合わせ</a>
       </nav>
     </div>
-    <div class="wrap copy">© 2026 SDR Receiver ・ 掲載している画面は iOS シミュレーターと合成信号で撮影したものです。</div>
+    <div class="wrap copy">© 2026 SDROne ・ 掲載している画面は iOS シミュレーターと合成信号で撮影したものです。</div>
     </div>
   </footer>
 
